@@ -1,52 +1,12 @@
-{% set section = "company-profile" %}
+{% set section = "your-jobs" %}
 
 {% extends "layout_findajob.html" %}
 
 {% block pageTitle %}
-  Your company's jobs – Find a job – GOV.UK
+  Your jobs – Find a job – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-      <h1 class="govuk-heading-s">Primary navigation (needs design pattern)</h2>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="/create-account">Create account
-          </a>
-        </li>
-        <li>
-          <a href="/contact-us">Contact us
-          </a>
-        </li>      
-        <li>
-          <a href="/sign-in">Sign in
-          </a>
-        </li>          
-      </ul>
-
-      <h1 class="govuk-heading-s">Secondary navigation (once signed in, needs design pattern)</h2>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="/your-jobs">Your jobs
-          </a>
-        </li>
-        <li>
-          <a href="/company-profile">Company profile
-          </a>
-        </li>
-        <li>
-          <a href="/account-details">Account details
-          </a>
-        </li>                    
-      </ul>
-      
-    </div>
-  </div>
 
   {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
 
@@ -68,14 +28,16 @@
 
       <h1 class="govuk-heading-xl">Your jobs</h1>
 
+        <form class="form" action="#" method="post">
+
         <table class="govuk-table">
          <caption class="govuk-table__caption">Acme Ltd's jobs</caption>
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">ID</th>
               <th scope="col" class="govuk-table__header">Title</th>
               <th scope="col" class="govuk-table__header">Location</th>
-              <th scope="col" class="govuk-table__header">ID</th>
-              <th scope="col" class="govuk-table__header">Added by</th>
+{#               <th scope="col" class="govuk-table__header">Added by</th> #}
               <th scope="col" class="govuk-table__header">Submitted</th>
               <th scope="col" class="govuk-table__header">Published</th>            
               <th scope="col" class="govuk-table__header">Closing</th>
@@ -84,23 +46,23 @@
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header"><a href="#">Cook</a></th>
+              <th scope="row" class="govuk-table__header">1</th>
+              <td class="govuk-table__cell"><a href="#">Cook</td>
               <td class="govuk-table__cell">York</td>
-              <td class="govuk-table__cell">1</td>
-              <td class="govuk-table__cell">Dominique Wilkins</td>
-              <td class="govuk-table__cell">15 August 2019</td>
+{#               <td class="govuk-table__cell">Dominique Wilkins</td>
+ #}              <td class="govuk-table__cell">15 August 2019</td>
               <td class="govuk-table__cell">Not published</td>
               <td class="govuk-table__cell">1 September 2019</td>
-              <td class="govuk-table__cell">With support for review</td>
+              <td class="govuk-table__cell">In review</td>
             </tr>
           </tbody>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header"><a href="#">Cleaner</a></th>
+              <th scope="row" class="govuk-table__header">2</th>
+              <td class="govuk-table__cell"><a href="#">Cleaner</a></td>
               <td class="govuk-table__cell">Leeds</td>
-              <td class="govuk-table__cell">2</td>
-              <td class="govuk-table__cell">John Stockton</td>
-              <td class="govuk-table__cell">18 August 2019</td>
+{#               <td class="govuk-table__cell">John Stockton</td>
+ #}              <td class="govuk-table__cell">18 August 2019</td>
               <td class="govuk-table__cell">20 August 2019</td>
               <td class="govuk-table__cell">4 September 2019</td>
               <td class="govuk-table__cell">Live</td>
@@ -108,11 +70,11 @@
           </tbody>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header"><a href="#">Stock picker</a></th>
+              <th scope="row" class="govuk-table__header">3</th>
+              <td class="govuk-table__cell"><a href="#">Stock picker</a></td>
               <td class="govuk-table__cell">Harrogate</td>
-              <td class="govuk-table__cell">3</td>
-              <td class="govuk-table__cell">Darryl Dawkins</td>
-              <td class="govuk-table__cell">1 July 2019</td>
+{#               <td class="govuk-table__cell">Darryl Dawkins</td>
+ #}              <td class="govuk-table__cell">1 July 2019</td>
               <td class="govuk-table__cell">2 July 2019</td>
               <td class="govuk-table__cell">15 July 2019</td>
               <td class="govuk-table__cell">Closed</td>
@@ -120,11 +82,11 @@
           </tbody>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header"><a href="#">Baker</a></th>
+              <th scope="row" class="govuk-table__header">4</th>
+              <td class="govuk-table__cell"><a href="#">Baker</a></td>
               <td class="govuk-table__cell">Nottingham</td>
-              <td class="govuk-table__cell">4</td>
-              <td class="govuk-table__cell">Pete Maravich</td>
-              <td class="govuk-table__cell">4 June 2019</td>
+{#               <td class="govuk-table__cell">Pete Maravich</td>
+ #}              <td class="govuk-table__cell">4 June 2019</td>
               <td class="govuk-table__cell">5 June 2019</td>
               <td class="govuk-table__cell">17 June 2019</td>
               <td class="govuk-table__cell">Removed by support</td>
@@ -132,11 +94,11 @@
           </tbody>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header"><a href="#">Cashier</a></th>
+              <th scope="row" class="govuk-table__header">5</th>
+              <td class="govuk-table__cell"><a href="#">Cashier</a></td>
               <td class="govuk-table__cell">Bradford</td>
-              <td class="govuk-table__cell">5</td>
-              <td class="govuk-table__cell">Julius Erving</td>
-              <td class="govuk-table__cell">9 June 2019</td>
+{#               <td class="govuk-table__cell">Julius Erving</td>
+ #}              <td class="govuk-table__cell">9 June 2019</td>
               <td class="govuk-table__cell">Not published</td>
               <td class="govuk-table__cell">Not published</td>
               <td class="govuk-table__cell">Removed by support</td>
@@ -145,12 +107,9 @@
 
         </table>
 
-        <form class="form" action="#" method="post">
-
         <button class="govuk-button" data-module="govuk-button">Add a job</button>
 
         </form>
-
 
     </div>
   </div>

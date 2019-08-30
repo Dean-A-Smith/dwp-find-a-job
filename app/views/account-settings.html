@@ -1,13 +1,12 @@
-{% set section = "sign-in" %}
+{% set section = "account-settings" %}
 
-{% extends "layout_findajob_signed-out.html" %}
+{% extends "layout_findajob.html" %}
 
 {% block pageTitle %}
-  Password reset link sent – Find a job – GOV.UK
+  Question page
 {% endblock %}
 
 {% block beforeContent %}
-
   {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
 
     {{ govukPhaseBanner({
@@ -18,8 +17,6 @@
     }) }}
 
   <a class="govuk-back-link" href="javascript:history.back()">Back</a>
-
-
 {% endblock %}
 
 {% block content %}
@@ -27,15 +24,15 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Password reset link sent</h1>
+      <h1 class="govuk-heading-xl">Account settings</h1>
 
-      <p>If the email address exists in our system, we have sent an email to example@mail.com</p>
+      <h2 class="govuk-heading-l">Change password</h2>
 
-      <p>Use the link to reset your password within 24 hours.</p>
+      <p>Request an email so you can <a href="/reset-password">reset your password</a>.</p>
 
-      <p>If you cannot find the email, check your spam or junk email folder.</p>
+      <h2 class="govuk-heading-l">Delete account</h2>
 
-      <p><a href="/index">Back to the prototype homepage</a></p>
+      <p>If you no longer want to use the Find a job service you can <a href="">delete your account</a>.</p>
 
     </div>
   </div>

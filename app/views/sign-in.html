@@ -1,4 +1,6 @@
-{% extends "layout.html" %}
+{% set section = "sign-in" %}
+
+{% extends "layout_findajob_signed-out.html" %}
 
 {% block pageTitle %}
   Sign in – Find a job – GOV.UK
@@ -7,23 +9,6 @@
 {% block beforeContent %}
 
 {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
-  
-   <h1 class="govuk-heading-s">Primary navigation (needs design pattern)</h2>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="/sign-in">Create account
-          </a>
-        </li>
-        <li>
-          <a href="/contact-us">Contact us
-          </a>
-        </li>      
-        <li>
-          <a href="/sign-in">Sign in
-          </a>
-        </li>
-      </ul>
 
   {{ govukPhaseBanner({
     tag: {

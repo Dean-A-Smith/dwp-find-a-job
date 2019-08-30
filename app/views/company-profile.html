@@ -1,49 +1,12 @@
-{% extends "layout.html" %}
+{% set section = "company-profile" %}
+
+{% extends "layout_findajob.html" %}
 
 {% block pageTitle %}
-  Your company account – Find a job – GOV.UK
+  Company profile – Find a job – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-      <h1 class="govuk-heading-s">Primary navigation (needs design pattern)</h2>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="/create-account">Create account
-          </a>
-        </li>
-        <li>
-          <a href="/contact-us">Contact us
-          </a>
-        </li>      
-        <li>
-          <a href="/sign-in">Sign in
-          </a>
-        </li>          
-      </ul>
-
-      <h1 class="govuk-heading-s">Secondary navigation (once signed in, needs design pattern)</h2>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="/your-jobs">Your jobs
-          </a>
-        </li>
-        <li>
-          <a href="/company-profile">Company profile
-          </a>
-        </li>
-        <li>
-          <a href="/account-details">Account details
-          </a>
-        </li>                    
-      </ul>
-    </div>
-  </div>
 
   {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
 
@@ -130,7 +93,7 @@
             Telephone number
           </dt>
           <dd class="govuk-summary-list__value">
-            07700 900457
+            01234 567 890
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -172,7 +135,7 @@
             Disability Confident status
           </dt>
           <dd class="govuk-summary-list__value">
-            Not set
+            <p>{{ data['disability-confident'] }}</p>
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/disability-confident-status">
@@ -182,17 +145,15 @@
           </dd>
         </div>
       </dl>
-
+    
       <h2 class="govuk-heading-l">Bulk upload</h2>
 
-      <p>You can add multiple jobs to the service at a time through the 'bulk upload' feature.</p>
+      <p>You can add multiple jobs to the service at a time through the 'bulk upload' feature. This involves a few technical steps, so you may prefer to post jobs one by one if you're not regularly posting lots of jobs.
 
-      <p>This involves a few technical steps, so you may prefer to post jobs one by one if you're not regularly posting lots of jobs.
+      <p>Read the <a href="https://static.findajob.dwp.gov.uk/images/find_a_job_bulk_upload_spec_v1.9.pdf">technical guidance</a> about how to bulk upload jobs.</p>
 
-      <p>Read the <a href="#">technical guidance</a> about how to bulk upload jobs.</p>
-
-      <p><a href="#">Request access to the bulk upload feature</a>.</p>      
-
+      <p><a href="#">Request access to the bulk upload feature</a>.</p> 
+    
       <h2 class="govuk-heading-l">Delete company</h2>
 
       <p>You can <a href="#">delete this company</a> to remove all of its data from the 'Find a job' service.</p>

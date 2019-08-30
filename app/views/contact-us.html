@@ -1,49 +1,12 @@
-{% extends "layout.html" %}
+{% set section = "contact-us" %}
+
+{% extends "layout_findajob.html" %}
 
 {% block pageTitle %}
   Contact the support team - Find a job – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-      <h1 class="govuk-heading-s">Primary navigation (needs design pattern)</h2>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="/create-account">Create account
-          </a>
-        </li>
-        <li>
-          <a href="/contact-us">Contact us
-          </a>
-        </li>      
-        <li>
-          <a href="/sign-in">Sign in
-          </a>
-        </li>          
-      </ul>
-
-      <h1 class="govuk-heading-s">Secondary navigation (once signed in, needs design pattern)</h2>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="/your-jobs">Your jobs
-          </a>
-        </li>
-        <li>
-          <a href="/company-profile">Company profile
-          </a>
-        </li>
-        <li>
-          <a href="/account-details">Account details
-          </a>
-        </li>                    
-      </ul>
-    </div>
-  </div>
 
   {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
 
