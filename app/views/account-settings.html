@@ -3,7 +3,7 @@
 {% extends "layout_findajob.html" %}
 
 {% block pageTitle %}
-  Question page
+  Account settings - Find a job - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -16,7 +16,17 @@
       html: 'Messages will not be sent and no data is saved.'
     }) }}
 
-  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/">Find a job</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          Account settings
+        </li>
+      </ol>
+    </div>
+
 {% endblock %}
 
 {% block content %}
@@ -26,13 +36,26 @@
 
       <h1 class="govuk-heading-xl">Account settings</h1>
 
+      <h2 class="govuk-heading-l">Email alerts</h2>
+
+      <p><a href="#">Manage the email alerts</a> you have created for job adverts.</p>
+
+      <h2 class="govuk-heading-l">Favourite jobs</h2>
+
+      <p><a href="#">Manage the jobs you've saved</a> through the heart icon.</p>
+
+      <h2 class="govuk-heading-l">Activity history</h2>
+
+      <p><a href="#">View your activity history</a> &ndash; the job searches you've made, job adverts you've viewed and job applications sent
+      through the service.</p>
+
       <h2 class="govuk-heading-l">Change password</h2>
 
-      <p>Request an email so you can <a href="/reset-password">reset your password</a>.</p>
+      <p><a href="/reset-password-request-sent-signed-in">Request a password reset email</a> &ndash; this will be sent to example@mail.com</p>
 
       <h2 class="govuk-heading-l">Delete account</h2>
 
-      <p>If you no longer want to use the Find a job service you can <a href="">delete your account</a>.</p>
+      <p>You can <a href="#">delete your account</a> if you no longer want to use the 'Find a job' service.</p>
 
     </div>
   </div>

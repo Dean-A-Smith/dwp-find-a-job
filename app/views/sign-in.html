@@ -17,8 +17,16 @@
     html: 'Messages will not be sent and no data is saved.'
   }) }}
 
-
-  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/">Find a job</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          Sign in
+        </li>
+      </ol>
+    </div>
 
 {% endblock %}
 
@@ -47,7 +55,7 @@
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 
-        <p><a href="forgotten-password">Forgotten your password?</a></p>
+        <p><a href="reset-password">Reset your password</a></p>
 
         <h2 class="govuk-heading-m">If you don't have an account</h2>        
         
@@ -55,7 +63,7 @@
 
         <ul class="govuk-list govuk-list--bullet">
           <li>
-            apply for jobs through the service
+            apply for jobs
           </li>
           <li>
             save your favourite jobs and searches
@@ -72,10 +80,10 @@
 
         <ul class="govuk-list govuk-list--bullet">
           <li>
-            advertise jobs through the service
+            advertise jobs
           </li>
           <li>
-            get email alerts about new applications
+            manage and receive applications
           </li>
         </ul>
 

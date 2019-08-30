@@ -17,7 +17,16 @@
       html: 'Messages will not be sent and no data is saved.'
     }) }}
 
-  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/">Find a job</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          Contact us
+        </li>
+      </ol>
+    </div>
   
 {% endblock %}
 
@@ -31,8 +40,6 @@
       <h1 class="govuk-heading-xl">
         Contact the support team
       </h1>
-
-      <p>If you have a question about how to use the website, you may find an answer in the help and advice for <a href="https://findajob.dwp.gov.uk/help-and-advice.html">jobseekers</a> or <a href="https://findajob.dwp.gov.uk/help-and-advice-employer.html">employers</a>.</p>
 
       <div class="govuk-form-group">
         <label class="govuk-label govuk-label--s" for="email">
