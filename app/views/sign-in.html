@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Sign in – Find a job – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+  
+   <h1 class="govuk-heading-s">Primary navigation (needs design pattern)</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="/sign-in">Sign in
+          </a>
+        </li>
+        <li>
+          <a href="/contact-us">Contact us
+          </a>
+        </li>  
+        <li>      
+          <a href="#">Cymraeg
+          </a>
+        </li>           
+      </ul>
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Sign in with your 'Find a job' account</h1>
+
+      <form class="form" action="/your-jobs" method="post">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="event-name">
+            Email address
+          </label>
+          <input class="govuk-input" id="event-name" name="event-name" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="event-name">
+            Password
+          </label>
+          <input class="govuk-input" id="event-name" name="event-name" type="text">
+        </div>        
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+        <p><a href="forgotten-password">Forgotten your password?</a></p>
+
+        <h2 class="govuk-heading-m">If you don't have an account</h2>        
+        
+        <p><a href="#">Create a jobseeker account</a> to:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            apply for jobs through the service
+          </li>
+          <li>
+            save your favourite jobs and searches
+          </li>
+          <li>
+            get email alerts about new jobs
+          </li>
+          <li>
+            track which jobs you have viewed and applied for
+          </li>
+        </ul>
+
+        <p><a href="#">Create an employer account</a> to:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            advertise jobs through the service
+          </li>
+          <li>
+            get email alerts about new applications
+          </li>
+        </ul>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

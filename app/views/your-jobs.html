@@ -1,0 +1,163 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Your company's jobs – Find a job – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-s">Primary navigation (needs design pattern)</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="/sign-in">Sign out
+          </a>
+        </li>
+        <li>
+          <a href="/contact-us">Contact us
+          </a>
+        </li>  
+        <li>      
+          <a href="#">Cymraeg
+          </a>
+        </li>           
+      </ul>
+
+      <h1 class="govuk-heading-s">Secondary navigation (once signed in, needs design pattern)</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="#">Add a job
+          </a>
+        </li>        
+        <li>
+          <a href="/your-jobs">Your jobs
+          </a>
+        </li>
+        <li>
+          <a href="/company-account">Your company
+          </a>
+        </li>
+        <li>
+          <a href="#">Company users
+          </a>
+        </li>
+        <li>
+          <a href="#">Manage account
+          </a>
+        </li>                    
+      </ul>
+    </div>
+  </div>
+
+  {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+    {{ govukPhaseBanner({
+      tag: {
+        text: "Testing only"
+      },
+      html: 'Messages will not be sent and no data is saved.'
+    }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">Your jobs</h1>
+
+        <table class="govuk-table">
+         <caption class="govuk-table__caption">Acme Ltd's jobs</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Title</th>
+              <th scope="col" class="govuk-table__header">Location</th>
+              <th scope="col" class="govuk-table__header">ID</th>
+              <th scope="col" class="govuk-table__header">Added by</th>
+              <th scope="col" class="govuk-table__header">Submitted</th>
+              <th scope="col" class="govuk-table__header">Published</th>            
+              <th scope="col" class="govuk-table__header">Closing</th>
+              <th scope="col" class="govuk-table__header">Status</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="#">Cook</a></th>
+              <td class="govuk-table__cell">York</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Dominique Wilkins</td>
+              <td class="govuk-table__cell">15 August 2019</td>
+              <td class="govuk-table__cell">Not published</td>
+              <td class="govuk-table__cell">1 September 2019</td>
+              <td class="govuk-table__cell">With support for review</td>
+            </tr>
+          </tbody>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="#">Cleaner</a></th>
+              <td class="govuk-table__cell">Leeds</td>
+              <td class="govuk-table__cell">2</td>
+              <td class="govuk-table__cell">John Stockton</td>
+              <td class="govuk-table__cell">18 August 2019</td>
+              <td class="govuk-table__cell">20 August 2019</td>
+              <td class="govuk-table__cell">4 September 2019</td>
+              <td class="govuk-table__cell">Live</td>
+            </tr>
+          </tbody>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="#">Stock picker</a></th>
+              <td class="govuk-table__cell">Harrogate</td>
+              <td class="govuk-table__cell">3</td>
+              <td class="govuk-table__cell">Darryl Dawkins</td>
+              <td class="govuk-table__cell">1 July 2019</td>
+              <td class="govuk-table__cell">2 July 2019</td>
+              <td class="govuk-table__cell">15 July 2019</td>
+              <td class="govuk-table__cell">Closed</td>
+            </tr>
+          </tbody>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="#">Baker</a></th>
+              <td class="govuk-table__cell">Nottingham</td>
+              <td class="govuk-table__cell">4</td>
+              <td class="govuk-table__cell">Pete Maravich</td>
+              <td class="govuk-table__cell">4 June 2019</td>
+              <td class="govuk-table__cell">5 June 2019</td>
+              <td class="govuk-table__cell">17 June 2019</td>
+              <td class="govuk-table__cell">Removed by support</td>
+            </tr>
+          </tbody>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="#">Cashier</a></th>
+              <td class="govuk-table__cell">Bradford</td>
+              <td class="govuk-table__cell">5</td>
+              <td class="govuk-table__cell">Julius Erving</td>
+              <td class="govuk-table__cell">9 June 2019</td>
+              <td class="govuk-table__cell">Not published</td>
+              <td class="govuk-table__cell">Not published</td>
+              <td class="govuk-table__cell">Removed by support</td>
+            </tr>
+          </tbody>
+
+        </table>
+
+        <form class="form" action="#" method="post">
+
+        <button class="govuk-button" data-module="govuk-button">Add a job</button>
+
+        </form>
+
+
+    </div>
+  </div>
+
+{% endblock %}

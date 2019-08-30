@@ -1,0 +1,175 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Contact the support team - Find a job – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-s">Primary navigation (needs design pattern)</h2>
+
+       <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="/sign-in">Sign out
+          </a>
+        </li>
+        <li>
+          <a href="/contact-us">Contact us
+          </a>
+        </li>  
+        <li>      
+          <a href="#">Cymraeg
+          </a>
+        </li>           
+      </ul>
+
+      <h1 class="govuk-heading-s">Secondary navigation (once signed in, needs design pattern)</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="#">Add a job
+          </a>
+        </li>        
+        <li>
+          <a href="/your-jobs">Your jobs
+          </a>
+        </li>
+        <li>
+          <a href="/company-account">Your company
+          </a>
+        </li>
+        <li>
+          <a href="#">Company users
+          </a>
+        </li>
+        <li>
+          <a href="#">Manage account
+          </a>
+        </li>                    
+      </ul>
+    </div>
+  </div>
+
+  {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+    {{ govukPhaseBanner({
+      tag: {
+        text: "Testing only"
+      },
+      html: 'Messages will not be sent and no data is saved.'
+    }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+  
+{% endblock %}
+
+{% block content %}
+
+  <form class="form" action="/contact-us-message-sent" method="post">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Contact the support team
+      </h1>
+
+      <p>If you have a question about how to use the website, you may find an answer in the help and advice for <a href="https://findajob.dwp.gov.uk/help-and-advice.html">jobseekers</a> or <a href="https://findajob.dwp.gov.uk/help-and-advice-employer.html">employers</a>.</p>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="email">
+          Email address
+        </label>
+        <span id="email-hint" class="govuk-hint">
+          We’ll only use this to reply to your message
+        </span>
+        <input class="govuk-input" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="telephone-number">
+          Telephone number (optional)
+        </label>
+        <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel" autocomplete="tel">
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            <h1 class="govuk-fieldset__heading">
+              What kind of issue do you have?
+            </h1>
+          </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-of-problem-1" name="type-of-problem" type="radio" value="jobseeker-account">
+              <label class="govuk-label govuk-radios__label" for="type-of-problem-1">
+                I'm a <strong>jobseeker</strong> and I need help with my account
+              </label> </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-of-problem-2" name="type-of-problem" type="radio" value="jobseeker-search">
+              <label class="govuk-label govuk-radios__label" for="type-of-problem-2">
+                I'm a <strong>jobseeker</strong> and I need help searching for a job on this website
+              </label> </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-of-problem-3" name="type-of-problem" type="radio" value="jobseeker-complaint">
+              <label class="govuk-label govuk-radios__label" for="type-of-problem-3">
+                I'm a <strong>jobseeker</strong> and I have a complaint about an employer
+              </label> </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-of-problem-4" name="type-of-problem" type="radio" value="jobseeker-other">
+              <label class="govuk-label govuk-radios__label" for="type-of-problem-4">
+                I'm a <strong>jobseeker</strong> and I have a different issue
+              </label> </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-of-problem-5" name="type-of-problem" type="radio" value="employer-account">
+              <label class="govuk-label govuk-radios__label" for="type-of-problem-5">
+                I'm an <strong>employer</strong> and I need help with my account
+              </label> </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-of-problem-6" name="type-of-problem" type="radio" value="employer-posting">
+              <label class="govuk-label govuk-radios__label" for="type-of-problem-6">
+                I'm an <strong>employer</strong> and I need help posting my job adverts
+              </label> </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-of-problem-7" name="type-of-problem" type="radio" value="employer-bulk-upload">
+              <label class="govuk-label govuk-radios__label" for="type-of-problem-7">
+                I'm an <strong>employer</strong> and I have an issue with bulk uploading job adverts
+              </label> </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-of-problem-8" name="type-of-problem" type="radio" value="employer-other">
+              <label class="govuk-label govuk-radios__label" for="type-of-problem-8">
+                I'm an <strong>employer</strong> and I have a different issue
+              </label> </div>
+          </div>
+        </fieldset>
+      </div>
+
+          <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1000">
+            <div class="govuk-form-group">
+              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="label-as-page-heading">
+                  What are the details?
+                </label>
+
+              </h1>
+              <textarea class="govuk-textarea govuk-js-character-count " id="label-as-page-heading" name="label-as-page-heading" rows="10" aria-describedby="label-as-page-heading-info"></textarea>
+            </div>
+
+            <span id="label-as-page-heading-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+              You can enter up to 1000 characters
+            </span>
+          </div>
+
+      <p>We aim to reply within one working day (Monday to Friday).</p>
+
+        <button type="submit" class="govuk-button">
+          Send message
+        </button>
+
+    </div>
+  </div>
+
+{% endblock %}

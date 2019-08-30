@@ -1,0 +1,211 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Your company account – Find a job – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-s">Primary navigation (needs design pattern)</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="/sign-in">Sign out
+          </a>
+        </li>
+        <li>
+          <a href="/contact-us">Contact us
+          </a>
+        </li>  
+        <li>      
+          <a href="#">Cymraeg
+          </a>
+        </li>           
+      </ul>
+
+      <h1 class="govuk-heading-s">Secondary navigation (once signed in, needs design pattern)</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="#">Add a job
+          </a>
+        </li>        
+        <li>
+          <a href="/your-jobs">Your jobs
+          </a>
+        </li>
+        <li>
+          <a href="/company-account">Your company
+          </a>
+        </li>
+        <li>
+          <a href="#">Company users
+          </a>
+        </li>
+        <li>
+          <a href="#">Manage account
+          </a>
+        </li>                    
+      </ul>
+    </div>
+  </div>
+
+  {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+    {{ govukPhaseBanner({
+      tag: {
+        text: "Testing only"
+      },
+      html: 'Messages will not be sent and no data is saved.'
+    }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Your company</h1>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Company name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Acme Ltd
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> company name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Trading name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Acme Corp
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> trading name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>1 Westlands<br>
+            Newville<br>
+            North Yorkshire<br>
+            YO99 1YO</p> 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Website
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <a href="https://www.google.co.uk">www.google.co.uk</a>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> website</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Telephone number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            07700 900457
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> telephone number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Company size
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Small (11 to 50 employees)
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> company size</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Sector
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Agriculture, forestry and fishing
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> sector</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Disability Confident status
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Not set
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/disability-confident-status">
+              Change
+              <span class="govuk-visually-hidden"> Disability Confident status</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-l">Bulk upload</h2>
+
+      <p>You can add multiple jobs to the service at a time through the 'bulk upload' feature.</p>
+
+      <p>This involves a few technical steps, so you may prefer to post jobs one by one if you're not regularly posting lots of jobs.
+
+      <p>Read the <a href="#">technical guidance</a> about how to bulk upload jobs.</p>
+
+      <p><a href="#">Request access to the bulk upload feature</a>.</p>      
+
+      <h2 class="govuk-heading-l">Delete company</h2>
+
+      <p>You can <a href="#">delete this company</a> to remove all of its data from the 'Find a job' service.</p>
+
+    </div>
+  </div>
+
+{% endblock %}

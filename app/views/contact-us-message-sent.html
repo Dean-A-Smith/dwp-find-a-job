@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Message sent to the support team - Find a job – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-s">Primary navigation (needs design pattern)</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="/sign-in">Sign out
+          </a>
+        </li>
+        <li>
+          <a href="/contact-us">Contact us
+          </a>
+        </li>  
+        <li>      
+          <a href="#">Cymraeg
+          </a>
+        </li>           
+      </ul>
+
+      <h1 class="govuk-heading-s">Secondary navigation (once signed in, needs design pattern)</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="#">Add a job
+          </a>
+        </li>        
+        <li>
+          <a href="/your-jobs">Your jobs
+          </a>
+        </li>
+        <li>
+          <a href="/company-account">Your company
+          </a>
+        </li>
+        <li>
+          <a href="#">Company users
+          </a>
+        </li>
+        <li>
+          <a href="#">Manage account
+          </a>
+        </li>                    
+      </ul>
+    </div>
+  </div>
+
+  {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+    {{ govukPhaseBanner({
+      tag: {
+        text: "Testing only"
+      },
+      html: 'Messages will not be sent and no data is saved.'
+    }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+  
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">Message sent to the support team</h1>
+      </div>
+
+      <p>If you do not receive a reply within one working day (Monday to Friday), check your email account's spam or junk folder.</p>
+
+      <p><a href="/index">Back to the prototype homepage</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}
