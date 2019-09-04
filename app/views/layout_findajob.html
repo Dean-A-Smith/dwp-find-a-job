@@ -58,8 +58,8 @@
           <li><a href="account-settings" {% if section === "account-settings" %}class="current"{% endif %}>Account settings</a></li>
         </ul>
         <ul class="header-nav header-nav-secondary">
-          <li><a href="contact-us" {% if section === "contact-us" %}class="current"{% endif %}>Contact us</a></li>
-          <li><a href="sign-in" {% if section === "sign-out" %}class="current"{% endif %}>Sign out</a></li>
+{#           <li><a href="create-account" {% if section === "create-account" %}class="current"{% endif %}>Create account</a></li> #}
+          <li><a href="sign-in" {% if section === "sign-in" %}class="current"{% endif %}>Sign out</a></li>
         </ul>
       </nav>
     </div>{# /govuk-header__content #}
@@ -82,7 +82,11 @@
           {
             href: "#",
             text: "Accessibility"
-          },         
+          },
+          {
+            href: "/contact-us",
+            text: "Contact us"
+          },       
           {
             href: "#",
             text: "Cookies"

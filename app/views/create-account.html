@@ -1,0 +1,51 @@
+{% set section = "create-account" %}
+
+{% extends "layout_findajob_signed-out.html" %}
+
+{% block pageTitle %}
+  Create an account – Find a job – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/">Find a job</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          Create account
+        </li>
+      </ol>
+    </div>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Create an account</h1>
+
+      <form class="form" action="/your-jobs" method="post">
+      
+      <p>Some content here.</p>  
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
