@@ -1,0 +1,71 @@
+{% set section = "company-profile" %}
+
+{% extends "layout_findajob.html" %}
+
+{% block pageTitle %}
+  Create company profile – Find a job – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+  {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+    {{ govukPhaseBanner({
+      tag: {
+        text: "Testing only"
+      },
+      html: 'Messages will not be sent and no data is saved.'
+    }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/your-jobs" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              Declaration
+            </h1>
+          </legend>
+
+          <p>To advertise jobs on this service you must first read and agree to the:</p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="#">acceptable use policy (opens in a new window)
+              </a>
+            </li>
+            <li>
+              <a href="#">employer terms and conditions (opens in a new window)
+              </a>
+            </li>
+          </ul>
+
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="declaration" name="declaration" type="checkbox" value="yes">
+              <label class="govuk-label govuk-checkboxes__label" for="declaration">
+                I agree to the acceptable use policy and employer terms and conditions
+              </label>
+            </div>
+          </div>
+          
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+    </div>
+  </div>
+
+{% endblock %}

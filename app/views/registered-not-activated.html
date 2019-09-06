@@ -1,9 +1,9 @@
-{% set section = "sign-in" %}
+{% set section = "create-account" %}
 
 {% extends "layout_findajob_signed-out.html" %}
 
 {% block pageTitle %}
-  Password reset link sent – Find a job – GOV.UK
+  Email address registered but not activated – Find a job – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -26,15 +26,17 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Password reset link sent</h1>
+      <h1 class="govuk-heading-xl">You need to activate your account</h1>
 
-      <p>If the email address exists in our system, we will have sent a <a href="/email-reset-password">password reset email</a> to example@mail.com</p>
+      <form class="form" action="/your-jobs" method="post">
 
-      <p>Use the password reset link within 24 hours.</p>
+      <p>This email address has already been registered but the account has not been activated.</p>
 
-      <p>If you cannot find the email then look in your spam or junk email folder.</p>
+      <p>We've sent another email to user@mail.com so your can activate your account.</p>
 
       <p><a href="/index">Back to the prototype homepage</a></p>
+
+      </form>
 
     </div>
   </div>

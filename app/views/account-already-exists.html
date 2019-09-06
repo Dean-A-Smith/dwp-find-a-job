@@ -1,9 +1,9 @@
-{% set section = "sign-in" %}
+{% set section = "create-account" %}
 
 {% extends "layout_findajob_signed-out.html" %}
 
 {% block pageTitle %}
-  Password reset link sent – Find a job – GOV.UK
+  Account already exists – Find a job – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -26,15 +26,11 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Password reset link sent</h1>
+      <h1 class="govuk-heading-xl">There's already an account for this email address</h1>
 
-      <p>If the email address exists in our system, we will have sent a <a href="/email-reset-password">password reset email</a> to example@mail.com</p>
+      <p><a href="/reset-password">Reset your password</a> if you've forgotten it.</p>
 
-      <p>Use the password reset link within 24 hours.</p>
-
-      <p>If you cannot find the email then look in your spam or junk email folder.</p>
-
-      <p><a href="/index">Back to the prototype homepage</a></p>
+      <p>Or <a href="/sign-in">sign in</a>.</p>
 
     </div>
   </div>

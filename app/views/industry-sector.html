@@ -1,0 +1,275 @@
+{% set section = "company-profile" %}
+
+{% extends "layout_findajob.html" %}
+
+{% block pageTitle %}
+  Industry sector - Find a job – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+  {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+    {{ govukPhaseBanner({
+      tag: {
+        text: "Testing only"
+      },
+      html: 'Messages will not be sent and no data is saved.'
+    }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/disability-confident-status" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="industry-sector-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              Which industry sector does your company work in?
+            </h1>
+          </legend>
+          <span id="industry-sector-hint" class="govuk-hint">
+            Select one option.
+          </span>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector" name="industry-sector-1" type="radio" value="micro">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-1">
+                Accommodation and food service
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-2" name="industry-sector" type="radio" value="small">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-2">
+                Advertising and market research
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-3" name="industry-sector" type="radio" value="medium">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-3">
+                Agriculture, forestry and fishing
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-4" name="industry-sector" type="radio" value="medium">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-4">
+                Architectural and engineering
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-5" name="industry-sector" type="radio" value="micro">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-5">
+                Arts, entertainment and recreation
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-6" name="industry-sector" type="radio" value="small">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-6">
+                Cleaning
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-7" name="industry-sector" type="radio" value="medium">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-7">
+                Construction
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-8" name="industry-sector" type="radio" value="medium">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-8">
+                Education
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-9" name="industry-sector" type="radio" value="micro">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-9">
+                Electricity, gas, steam and air conditioning
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-10" name="industry-sector" type="radio" value="small">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-10">
+                Employment and recruitment agencies and HR
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-11" name="industry-sector" type="radio" value="medium">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-11">
+                Financial and insurance
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-12" name="industry-sector" type="radio" value="medium">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-12">
+                Information and communication
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-13" name="industry-sector" type="radio" value="micro">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-13">
+                Legal and accounting
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-14" name="industry-sector" type="radio" value="small">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-14">
+                Management consulting
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-15" name="industry-sector" type="radio" value="medium">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-15">
+                Manufacturing
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-16" name="industry-sector" type="radio" value="medium">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-16">
+                Medical care
+              </label>
+            </div>
+
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-17" name="industry-sector" type="radio" value="micro">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-17">
+                Mining and quarrying
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-18" name="industry-sector" type="radio" value="small">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-18">
+                Office administration
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-19" name="industry-sector" type="radio" value="medium">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-19">
+                Other professional, scientific and technical
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-20" name="industry-sector" type="radio" value="medium">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-20">
+                Other services
+              </label>
+            </div>
+
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-21" name="industry-sector" type="radio" value="micro">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-21">
+                Personal and household services
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-22" name="industry-sector" type="radio" value="small">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-22">
+                Public administration and defence
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-23" name="industry-sector" type="radio" value="medium">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-23">
+                Real estate
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-24" name="industry-sector" type="radio" value="medium">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-24">
+                Rental and leasing
+              </label>
+            </div>
+
+
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-25" name="industry-sector" type="radio" value="micro">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-25">
+                Research and development
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-26" name="industry-sector" type="radio" value="small">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-26">
+                Residential care
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-27" name="industry-sector" type="radio" value="medium">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-27">
+                Retail trade
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-28" name="industry-sector" type="radio" value="medium">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-28">
+                Security
+              </label>
+            </div>
+
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-29" name="industry-sector" type="radio" value="micro">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-29">
+                Social work
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-30" name="industry-sector" type="radio" value="small">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-30">
+                Trade and repair of motor vehicles and motorcycles
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-31" name="industry-sector" type="radio" value="medium">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-31">
+                Transporting and storage
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-32" name="industry-sector" type="radio" value="medium">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-32">
+                Travel
+              </label>
+            </div>
+
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-33" name="industry-sector" type="radio" value="micro">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-33">
+                Veterinary
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-34" name="industry-sector" type="radio" value="small">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-34">
+                Water supply, sewerage and waste management
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="industry-sector-35" name="industry-sector" type="radio" value="medium">
+              <label class="govuk-label govuk-radios__label" for="industry-sector-35">
+                Wholesale trade
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -17,19 +17,7 @@
       html: 'Messages will not be sent and no data is saved.'
     }) }}
 
-    <div class="govuk-breadcrumbs">
-      <ol class="govuk-breadcrumbs__list">
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/">Find a job</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/company-profile">Company profile</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-          Disability Confident status
-        </li>
-      </ol>
-    </div>
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
 
 {% endblock %}
 
@@ -47,12 +35,12 @@
                       Is your company registered as Disability Confident?
                     </h1>
                   </legend>
-                  <p>
-                    Jobs posted by Disability Confident employers will be marked with the Disability Confident logo to make it easier for jobseekers to find them.
-                  </p>
+
+                  <p>The Disability Confident scheme supports employers like you to make the most of the talents disabled people can bring to your workplace.</p>
+
                   <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="disability-confident-conditional" name="dc" type="radio" value="Yes, registered" {{ checked("disability-confident", "Yes") }} data-aria-controls="conditional-disability-confident-conditional" >
+                      <input class="govuk-radios__input" id="disability-confident-conditional" name="dc" type="radio" value="Yes, registered" {{ checked("dc", "Yes") }} data-aria-controls="conditional-disability-confident-conditional" >
                       <label class="govuk-label govuk-radios__label" for="disability-confident-conditional">
                         Yes, it is registered
                       </label>
@@ -67,14 +55,15 @@
 
                     </div>
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="disability-confident-conditional-2" name="dc" type="radio" value="Not registered" {{ checked("disability-confident", "No") }} data-aria-controls="conditional-disability-confident-conditional-2">
+                      <input class="govuk-radios__input" id="disability-confident-conditional-2" name="dc" type="radio" value="Not registered" {{ checked("dc", "No") }} data-aria-controls="conditional-disability-confident-conditional-2">
+
                       <label class="govuk-label govuk-radios__label" for="disability-confident-conditional-2">
                         Not registered
                       </label>
                     </div>
                     <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-disability-confident-conditional-2">
                       <div class="govuk-form-group" >
-                          <p>Find out how the <a href="https://disabilityconfident.campaign.gov.uk" target="_blank">Disability Confident scheme (opens in a new window)</a> can help you to make the most of the talents that disabled people can bring to your workplace</p>
+                          <p>Find out more about the <a href="https://disabilityconfident.campaign.gov.uk" target="_blank">Disability Confident scheme (opens in a new window)</a>.</p>
                       </div>
                    </div>
                   </div>

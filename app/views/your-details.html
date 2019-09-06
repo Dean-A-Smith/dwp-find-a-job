@@ -1,0 +1,86 @@
+{% set section = "company-profile" %}
+
+{% extends "layout_findajob.html" %}
+
+{% block pageTitle %}
+  Create company profile – Find a job – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+  {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+    {{ govukPhaseBanner({
+      tag: {
+        text: "Testing only"
+      },
+      html: 'Messages will not be sent and no data is saved.'
+    }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <p style="border: 5px solid green; padding: 10px 10px;">You've confirmed your email address<br><br>
+      [Shown if the user has just come from their activation email for the first time. This <a href="https://github.com/alphagov/govuk-design-system-backlog/issues/2">positive alert</a> needs interaction design work]</p>  
+
+      <form class="form" action="/company-name" method="post">
+
+      <h1 class="govuk-heading-xl">Your details</h1>
+
+      <p>The information you give will be used to by our support team to verify your company. This can take one to two working days. Your job adverts will not be published until your company is approved.</p>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="your-name">
+          Your name
+        </label>
+        <input class="govuk-input" id="your-name" name="your-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="your-phone-number">
+          Your phone number
+        </label>
+        <input class="govuk-input" id="your-phone-number" name="your-name" type="number">
+      </div> 
+
+      <p>Your registered email address is: man@mail.com</p>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <label class="govuk-label">
+              Preferred contact method
+            </h1>
+          </legend>
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="changed-name">
+                Email
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                Phone
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+
+    </div>
+  </div>
+
+{% endblock %}

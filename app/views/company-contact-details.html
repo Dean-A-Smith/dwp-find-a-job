@@ -1,0 +1,55 @@
+{% set section = "company-profile" %}
+
+{% extends "layout_findajob.html" %}
+
+{% block pageTitle %}
+  Company contact details – Find a job – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+  {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+    {{ govukPhaseBanner({
+      tag: {
+        text: "Testing only"
+      },
+      html: 'Messages will not be sent and no data is saved.'
+    }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/company-size" method="post">
+
+      <h1 class="govuk-heading-xl">What are your company's contact details?</h1>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="your-name">
+          Company phone number
+        </label>
+        <input class="govuk-input" id="your-name" name="your-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="your-name">
+          Company website (optional)
+        </label>
+        <input class="govuk-input" id="your-name" name="your-name" type="text">
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+
+    </div>
+  </div>
+
+{% endblock %}

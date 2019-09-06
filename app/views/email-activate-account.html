@@ -1,0 +1,51 @@
+{% set section = "create-account" %}
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Check your email and activate your account – Find a job – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div>
+        <p><strong>From: Find a job service [no-reply@findajob.gov.uk]<br>
+        Subject: Confirm your 'Find a job' account</strong></p>
+      </div>
+
+      <h1 class="govuk-heading-xl">Confirm your 'Find a job' account</h1>
+
+      <p>You've started to create an account for the 'Find a job' service.
+
+      <p>Follow this link to confirm your email address and finish creating your account: <a href="/your-details">[URL here]</a>
+
+      <p>The link will stop working after 24 hours.</p>
+
+      <p>If the link has expired you can request another: [URL here]</p>
+
+      <p>If you did not create a 'Find a job' account you can ignore this email.</p>
+
+      <p>Find a job team</p>
+
+      <p><a href="/index">Back to the prototype homepage</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}

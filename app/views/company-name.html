@@ -1,0 +1,58 @@
+{% set section = "company-profile" %}
+
+{% extends "layout_findajob.html" %}
+
+{% block pageTitle %}
+  Company name – Find a job – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+  {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+    {{ govukPhaseBanner({
+      tag: {
+        text: "Testing only"
+      },
+      html: 'Messages will not be sent and no data is saved.'
+    }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/company-contact-details" method="post">
+
+      <h1 class="govuk-heading-xl">What is your company's name?</h1>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="your-name">
+          Company name
+        </label>
+        <input class="govuk-input" id="your-name" name="your-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="trading-name">
+          Trading name (optional)
+        </label>
+      <span id="trading-name-hint" class="govuk-hint">
+        If your company trades using a different name to the one it is registered as
+      </span>
+        <input class="govuk-input" id="trading-name" name="trading-name" type="text" aria-describedby="trading-name-hint">
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+
+    </div>
+  </div>
+
+{% endblock %}
