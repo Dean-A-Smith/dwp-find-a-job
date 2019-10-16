@@ -1,0 +1,120 @@
+{% set section = "contact-us" %}
+
+{% extends "layout_findajob.html" %}
+
+{% block pageTitle %}
+  Contact the support team - Find a job – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+  {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+    {{ govukPhaseBanner({
+      tag: {
+        text: "Testing only"
+      },
+      html: 'Messages will not be sent and no data is saved.'
+    }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+  
+{% endblock %}
+
+{% block content %}
+
+  <form class="form" action="/contact-us-message-sent" method="post">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Contact the support team
+      </h1>
+
+      <p>This form is for issues to do with the 'Find a job' service.</p>
+
+      <p>You can use it to ask a question, report a problem or suggest an improvement to the support team.</p>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h2 class="govuk-label--m">
+              What's it to do with?
+            </h2>
+          </legend>
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional">
+              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
+                The whole service
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
+              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+                A specific page
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-phone">
+                  URL or name of page
+                </label>
+                <input class="govuk-input govuk-!-width-full" id="contact-by-phone" name="contact-by-phone" type="tel">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+
+          <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1000">
+            <div class="govuk-form-group">
+              <h1 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-label--m" for="label-as-page-heading">
+                  What are the details?
+                </label>
+              </h1>
+            <span id="more-detail-hint" class="govuk-hint">
+              For example, if you were looking to do something, what went wrong?
+            </span>
+            <textarea class="govuk-textarea govuk-js-character-count " id="label-as-page-heading" name="label-as-page-heading" rows="8" aria-describedby="label-as-page-heading-info"></textarea>
+            </div>
+            <span id="label-as-page-heading-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+              You can enter up to 1000 characters
+            </span>
+          </div>
+
+          <div class="govuk-form-group">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Do you want a reply?</legend>
+
+            <p class="govuk-body">Enter your details if you would like us to reply to you. We’ll only use your details to reply to your message.</p>
+
+            <div class="govuk-form-group">
+              <label class="gem-c-label govuk-label" for="name">Name</label>
+              <input name="contact[name]" id="name" type="text" class="gem-c-input govuk-input " value="">
+            </div>
+            <div class="govuk-form-group">
+              <label class="gem-c-label govuk-label" for="email">Email address</label>
+              <input name="contact[email]" id="email" type="email" class="gem-c-input govuk-input " value="">
+            </div>
+{#             <div class="govuk-form-group">
+              <label class="gem-c-label govuk-label" for="email">Telephone number</label>
+              <input name="contact[telephone]" id="tel" type="tel" class="gem-c-input govuk-input " value="">
+            </div> #}
+          </div>
+
+          <div>
+            <p class="govuk-body">We aim to reply within one working day (Monday to Friday).</p>
+          </div>
+
+          <button type="submit" class="govuk-button">
+            Send message
+          </button>
+
+    </div>
+  </div>
+
+{% endblock %}
