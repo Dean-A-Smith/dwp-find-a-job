@@ -32,13 +32,16 @@
         .banner-destructive-without-action .banner-content ul li, .banner-destructive-with-action .banner-content ul li, .banner-warning-with-action .banner-content ul li, .banner-warning-without-action .banner-content ul li, .banner-success-with-action .banner-content ul li, .banner-success-without-action .banner-content ul li, .banner-information-with-action .banner-content ul li, .banner-information-without-action .banner-content ul li, .banner-temporary-message-without-action .banner-content ul li {
           margin-bottom: 5px; }
   
-  .banner-destructive-without-action, .banner-destructive-with-action {
+  .banner-destructive-without-action, .banner-destructive-with-action,
+  .banner-destructive-without-action p, .banner-destructive-with-action p {
     color: #b10e1e; }
   
-  .banner-warning-with-action, .banner-warning-without-action {
+  .banner-warning-with-action, .banner-warning-without-action, 
+  .banner-warning-with-action p, .banner-warning-without-action p{
     color: #cd4c0b; }
   
-  .banner-success-with-action, .banner-success-without-action {
+  .banner-success-with-action, .banner-success-without-action,
+  .banner-success-with-action p, .banner-success-without-action p {
     color: #00823b; }
   
   .banner-action {
@@ -58,7 +61,8 @@
         font-size: 24px;
         line-height: 1.25; } }
   
-  .banner-information-with-action, .banner-information-without-action {
+  .banner-information-with-action, .banner-information-without-action,
+  .banner-information-with-action p, .banner-information-without-action p {
     color: #005ea5; }
   
   .banner-temporary-message-without-action {
